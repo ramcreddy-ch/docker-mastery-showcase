@@ -4,3 +4,5 @@
 
 - Security: Implement Non-root user execution (2026-01-3 10:00:00)
 
+- Add Healthchecks and Health monitoring (2026-01-4 10:00:00)
+
