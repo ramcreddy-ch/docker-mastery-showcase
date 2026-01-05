@@ -6,3 +6,5 @@
 
 - Add Healthchecks and Health monitoring (2026-01-4 10:00:00)
 
+- Orchestration: Create production-grade Compose stack (2026-01-5 10:00:00)
+
