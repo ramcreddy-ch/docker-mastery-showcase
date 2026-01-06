@@ -8,3 +8,5 @@
 
 - Orchestration: Create production-grade Compose stack (2026-01-5 10:00:00)
 
+- Level 5: Transition to Distroless (Static binaries) (2026-01-6 10:00:00)
+
