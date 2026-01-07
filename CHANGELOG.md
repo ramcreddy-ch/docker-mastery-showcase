@@ -10,3 +10,5 @@
 
 - Level 5: Transition to Distroless (Static binaries) (2026-01-6 10:00:00)
 
+- Implement Level 6: Advanced Networking Isolation (2026-01-7 10:00:00)
+
