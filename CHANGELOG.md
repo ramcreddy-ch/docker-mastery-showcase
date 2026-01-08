@@ -12,3 +12,5 @@
 
 - Implement Level 6: Advanced Networking Isolation (2026-01-7 10:00:00)
 
+- AI/ML: Add GPU-enabled Docker configuration (2026-01-8 10:00:00)
+
