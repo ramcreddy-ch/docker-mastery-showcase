@@ -14,3 +14,5 @@
 
 - AI/ML: Add GPU-enabled Docker configuration (2026-01-8 10:00:00)
 
+- Docs: Create Senior Interview Guide (2026-01-9 10:00:00)
+
