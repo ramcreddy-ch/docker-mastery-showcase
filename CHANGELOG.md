@@ -16,3 +16,5 @@
 
 - Docs: Create Senior Interview Guide (2026-01-9 10:00:00)
 
+- Docs: Add Comprehensive CLI Cheatsheet (2026-01-10 10:00:00)
+
