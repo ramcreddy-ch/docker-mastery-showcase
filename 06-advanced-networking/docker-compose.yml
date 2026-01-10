@@ -1,0 +1,43 @@
+# Level 6: Advanced Networking
+# This example demonstrates multi-tier isolation using custom networks.
+
+version: '3.8'
+
+services:
+  # TIER 1: FRONTEND (Public facing)
+  frontend:
+    image: nginx:alpine
+    networks:
+      - frontend-net
+    ports:
+      - "80:80"
+
+  # TIER 2: BACKEND (Internal only)
+  # Can talk to Frontend and Database, but Frontend can't talk to Database directly.
+  backend:
+    build:
+      context: ../03-security-hardening
+    networks:
+      - frontend-net
+      - backend-net
+    expose:
+      - "3000"
+
+  # TIER 3: DATABASE (Heavily isolated)
+  # Only accessible by the Backend.
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD: dummy_password
+    networks:
+      - backend-net
+    # No ports exposed to the host machine!
+
+networks:
+  # The frontend network (Bridge)
+  frontend-net:
+    driver: bridge
+  # The backend network (Bridge - potentially Overlay in Swarm/K8s)
+  backend-net:
+    driver: bridge
+    internal: true # Best practice: prevents external internet access for DB

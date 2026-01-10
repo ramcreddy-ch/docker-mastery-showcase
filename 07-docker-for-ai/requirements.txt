@@ -1,0 +1,4 @@
+requirements.txt
+inference.py
+models/
+.env

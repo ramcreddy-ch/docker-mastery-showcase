@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ../03-security-hardening
+      dockerfile: Dockerfile
+    image: myapp:prod-v1
+    container_name: production-app
+    restart: always # Auto-restart on failure
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    # 1. Resource Limits: Prevent "Noisy Neighbors" or Memory Leaks from crashing the host
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+    # 2. Networking: Isolate the app on its own internal network
+    networks:
+      - app-network
+
+    # 3. Security: Read-only root filesystem (best practice for stateless apps)
+    read_only: true
+    tmpfs:
+      - /tmp # Allow writing to /tmp if necessary
+      - /app/logs # Allow logs
+
+    # 4. Port exposure (typically through a Reverse Proxy/Load Balancer)
+    ports:
+      - "8080:3000"
+
+networks:
+  app-network:
+    driver: bridge
