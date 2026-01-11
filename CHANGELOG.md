@@ -18,3 +18,5 @@
 
 - Docs: Add Comprehensive CLI Cheatsheet (2026-01-10 10:00:00)
 
+- Refactor: Optimize layering for ML weights (2026-01-11 10:00:00)
+
