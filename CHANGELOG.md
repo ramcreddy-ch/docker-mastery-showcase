@@ -20,3 +20,5 @@
 
 - Refactor: Optimize layering for ML weights (2026-01-11 10:00:00)
 
+- Security: Add Trivy vulnerability scanning config (2026-01-12 10:00:00)
+
