@@ -22,3 +22,5 @@
 
 - Security: Add Trivy vulnerability scanning config (2026-01-12 10:00:00)
 
+- Enhance README with Architecture diagrams (2026-01-13 10:00:00)
+
